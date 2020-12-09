@@ -30,16 +30,223 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body>	
-    <nav>
-        <a href="#trailer">Trailer</a>
-        <a href="#story">Story</a>
-        <a href="#merch">Merch</a>
-        <a href="#signup">Sign Up</a>
-    </nav>
+<style>
+	@font-face {
+		font-family: 'Tapioca';
+		src: url('./Tapioca.woff2') format('woff2'),
+			url('./Tapioca.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 
+	@font-face {
+		font-family: 'Tapioca Shadow';
+		src: url('./TapiocaShadow.woff2') format('woff2'),
+			url('./TapiocaShadow.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+
+	/* START CSSRESET */ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}button,input[type="submit"]{padding:0;border:none;outline:none;font:inherit;color:inherit;background:none;cursor:pointer;-webkit-appearance: none;-webkit-border-radius: none;}*{box-sizing:border-box;}body,html{scroll-behavior: smooth;}
+
+	body {
+		color: black;
+		font-family: "Tapioca", sans-serif;
+	}
+	
+	ul, ol {
+		padding-left: 0.8em;
+		margin-bottom: 1.5em;
+	}
+
+	header, footer {
+		background: #f9f7b9;
+		min-height: 10vh;
+		padding: 1vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	header img {
+		max-width: 40vw;
+		width: 100px;
+	}
+	
+	section {
+		min-height: 45vh;
+		padding: calc(10px + 1vw);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	section > div {
+		max-width: 1200px;
+		width: 100%;
+	}
+	
+	#intro {
+		background: #508e3d;
+	}
+	
+	#intro h1 {
+	  color: #f9f7b9;
+	  font-size: calc(2em + 3vw);
+	  max-width: 33%;
+	  text-align: center;
+	  line-height: 1.25em;
+	}
+	
+	#intro > div {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  align-items: center;
+	}
+	
+	#intro > div > * {
+		flex-basis: 33%;
+		text-align: center;
+	}
+	
+	#intro .btns {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 3vw;
+	}
+	
+	#intro .btns a {
+		color: black;
+		text-decoration: none;
+		background: #fcbc3b;
+		border-radius: 5px;
+		display: inline-block;
+		font-size: calc(1em + 1.5vw);
+		padding: 8px 8px 2px;
+		margin: 5px 0;
+	}
+	
+	#deviltown {
+		background: #95b1d1;
+	}
+	
+	#deviltown > div{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	#deviltown > div > div {
+		flex-grow: 1;
+		padding: 2vw;
+		font-size: calc(1em + 1vw);
+		line-height: 1.25em;
+	}
+	
+	#deviltown img {
+	  padding: 2vw;
+	}
+	
+	#home {
+		background: #ed8450;
+	}
+
+	#home > div {
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	}
+
+	#home > div > div {
+	  font-size: calc(1em + 1vw);
+	  padding: 1vw;
+	  line-height: 1.15em;
+	}
+	
+	#questions {
+		background: #fcbc3b;
+	}
+	
+	#questions h2 {
+	  font-size: calc(1em + 2vw);
+	  margin-bottom: 1em;
+	}
+
+	#questions p {
+	  font-size: calc(1em + 0.5vw);
+	  line-height: 1.25em;
+	}
+
+	
+</style>
+
+<body>	
+	<header>
+		<img src="logo.png">
+	</header>
     <main>
-        
+        <section id="intro">
+			<div>
+				<h1>hi friend! wanna join the club?</h1>
+				<span>
+					<img src="introguy.png">
+				</span>
+				<div class="btns">
+					<a href="#">subscribe</a>
+					<a href="#">devil town</a>
+					<a href="#">this is home</a>
+					<a href="#">questions?</a>
+				</div>
+			</div>
+		</section>
+        <section id="deviltown">
+			<div>
+				<img src="devilman.png">
+				<div>
+					<p>devil town subscription includes:</p>
+					<ul>
+						<li>cave club discord server access</li>
+						<li>unlimited 15% off cavetown merch</li>
+						<li>official cave club member card</li>
+						<li>yearly custom sticker pack</li>
+					</ul>
+					<p>$3 monthly</p>
+				</div>
+			</div>
+		</section>
+        <section id="home">
+			<div>
+				<div>
+					<p>this is home subscription includes everything in the devil town subscription plus:</p>
+					<ul>
+						<li>exclusive vinyl variants</li>
+						<li>pre-sale tickets for future shows</li>
+						<li>yearly custom pin</li>
+						<li>access to limited edition merch</li>
+						<li>first access to new and behind-the-scenes content</li>
+					</ul>
+					<p>$7 monthly<br>(subscribe for a full year of this is home and only pay $5 monthly)</p>
+				</div>
+				<img src="homepal.png">
+			</div>
+		</section>
+        <section id="questions">
+			<div>
+				<h2>questions</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis luctus efficitur. Sed condimentum tortor vitae porttitor porttitor. Duis tincidunt leo et nulla ultricies, quis congue neque aliquet. Etiam pretium commodo ipsum, laoreet vulputate mi finibus a. Donec purus ante, scelerisque non purus at, facilisis mattis diam. Vestibulum ultricies felis nec vestibulum posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam blandit purus eu quam iaculis, ut accumsan lectus tincidunt. Pellentesque volutpat magna eget orci dapibus euismod. In ut urna sed quam interdum molestie a eu turpis. Vivamus gravida felis vitae risus pretium, nec auctor quam tincidunt. Sed ut maximus quam, ut pretium mi. Mauris blandit facilisis laoreet. Vivamus et turpis pharetra, sagittis lorem sit amet, egestas est. </p>
+			</div>
+		</section>
     </main>
+	<footer>
+		<img src="caveteam.png">
+	</footer>
 </body>
 </html>
