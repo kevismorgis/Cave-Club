@@ -7,7 +7,6 @@
     <meta name="theme-color" content="#000">
 
     <title>Cave Club</title>
-
 	
     <meta name="description" content=""/>
     <meta property="og:title" content=""/>
@@ -22,192 +21,52 @@
     <meta name="twitter:image" content="">
     <meta name="twitter:description" content="">
 
-    <link rel="icon" type="image/png" href="favicon.png" />
+	<link rel="icon" type="image/png" href="./favicon.png" />
 
     <script src="https://kit.fontawesome.com/ff46203259.js" crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="./stylesheet.css">
 </head>
-
-<style>
-	@font-face {
-		font-family: 'Tapioca';
-		src: url('./Tapioca.woff2') format('woff2'),
-			url('./Tapioca.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: 'Tapioca Shadow';
-		src: url('./TapiocaShadow.woff2') format('woff2'),
-			url('./TapiocaShadow.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-
-
-	/* START CSSRESET */ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}button,input[type="submit"]{padding:0;border:none;outline:none;font:inherit;color:inherit;background:none;cursor:pointer;-webkit-appearance: none;-webkit-border-radius: none;}*{box-sizing:border-box;}body,html{scroll-behavior: smooth;}
-
-	body {
-		color: black;
-		font-family: "Tapioca", sans-serif;
-	}
-	
-	ul, ol {
-		padding-left: 0.8em;
-		margin-bottom: 1.5em;
-	}
-
-	header, footer {
-		background: #f9f7b9;
-		min-height: 10vh;
-		padding: 1vw;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	header img {
-		max-width: 40vw;
-		width: 100px;
-	}
-	
-	section {
-		min-height: 45vh;
-		padding: calc(10px + 1vw);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
-	section > div {
-		max-width: 1200px;
-		width: 100%;
-	}
-	
-	#intro {
-		background: #508e3d;
-	}
-	
-	#intro h1 {
-	  color: #f9f7b9;
-	  font-size: calc(2em + 3vw);
-	  max-width: 33%;
-	  text-align: center;
-	  line-height: 1.25em;
-	}
-	
-	#intro > div {
-	  display: flex;
-	  flex-direction: row;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	  align-items: center;
-	}
-	
-	#intro > div > * {
-		flex-basis: 33%;
-		text-align: center;
-	}
-	
-	#intro .btns {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 0 3vw;
-	}
-	
-	#intro .btns a {
-		color: black;
-		text-decoration: none;
-		background: #fcbc3b;
-		border-radius: 5px;
-		display: inline-block;
-		font-size: calc(1em + 1.5vw);
-		padding: 8px 8px 2px;
-		margin: 5px 0;
-	}
-	
-	#deviltown {
-		background: #95b1d1;
-	}
-	
-	#deviltown > div{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	
-	#deviltown > div > div {
-		flex-grow: 1;
-		padding: 2vw;
-		font-size: calc(1em + 1vw);
-		line-height: 1.25em;
-	}
-	
-	#deviltown img {
-	  padding: 2vw;
-	}
-	
-	#home {
-		background: #ed8450;
-	}
-
-	#home > div {
-	  display: flex;
-	  flex-direction: row;
-	  align-items: center;
-	}
-
-	#home > div > div {
-	  font-size: calc(1em + 1vw);
-	  padding: 1vw;
-	  line-height: 1.15em;
-	}
-	
-	#questions {
-		background: #fcbc3b;
-	}
-	
-	#questions h2 {
-	  font-size: calc(1em + 2vw);
-	  margin-bottom: 1em;
-	}
-
-	#questions p {
-	  font-size: calc(1em + 0.5vw);
-	  line-height: 1.25em;
-	}
-
-	
-</style>
 
 <body>	
 	<header>
+		<div id="navtrigger" class="trigger">
+			<i class="fas fa-bars"></i>
+			<i class="fas fa-times"></i>
+		</div>
 		<img src="logo.png">
+		<a id="cavelink" href="http://cave.town" target="_blank" class="trigger"></a>
 	</header>
+
+	<nav>
+		<a href="#intro">subscribe</a>
+		<a href="#deviltown">devil town</a>
+		<a href="#home">this is home</a>
+		<a href="#questions">questions?</a>
+		<hr>
+		<a href="http://cave.town">cave.town</a>
+	</nav>
+
     <main>
-        <section id="intro">
+        <section id="caveintro">
+			<span class="anchor" id="intro"></span>
 			<div>
 				<h1>hi friend! wanna join the club?</h1>
-				<span>
+				<span class="introguy">
 					<img src="introguy.png">
 				</span>
 				<div class="btns">
-					<a href="#">subscribe</a>
-					<a href="#">devil town</a>
-					<a href="#">this is home</a>
-					<a href="#">questions?</a>
+					<span><a href="#intro">subscribe</a></span>
+					<span><a href="#deviltown">devil town</a></span>
+					<span><a href="#home">this is home</a></span>
+					<span><a href="#questions">questions?</a></span>
 				</div>
 			</div>
 		</section>
-        <section id="deviltown">
+        <section id="cavedeviltown">
+			<span class="anchor" id="deviltown"></span>
 			<div>
 				<img src="devilman.png">
 				<div>
@@ -222,7 +81,8 @@
 				</div>
 			</div>
 		</section>
-        <section id="home">
+        <section id="cavehome">
+			<span class="anchor" id="home"></span>
 			<div>
 				<div>
 					<p>this is home subscription includes everything in the devil town subscription plus:</p>
@@ -238,7 +98,8 @@
 				<img src="homepal.png">
 			</div>
 		</section>
-        <section id="questions">
+        <section id="cavequestions">
+			<span class="anchor" id="questions"></span>
 			<div>
 				<h2>questions</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis luctus efficitur. Sed condimentum tortor vitae porttitor porttitor. Duis tincidunt leo et nulla ultricies, quis congue neque aliquet. Etiam pretium commodo ipsum, laoreet vulputate mi finibus a. Donec purus ante, scelerisque non purus at, facilisis mattis diam. Vestibulum ultricies felis nec vestibulum posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam blandit purus eu quam iaculis, ut accumsan lectus tincidunt. Pellentesque volutpat magna eget orci dapibus euismod. In ut urna sed quam interdum molestie a eu turpis. Vivamus gravida felis vitae risus pretium, nec auctor quam tincidunt. Sed ut maximus quam, ut pretium mi. Mauris blandit facilisis laoreet. Vivamus et turpis pharetra, sagittis lorem sit amet, egestas est. </p>
@@ -246,7 +107,23 @@
 		</section>
     </main>
 	<footer>
-		<img src="caveteam.png">
+		<a href="https://www.cave.town" target="_blank"><img src="caveteam.png"></a>
 	</footer>
+
+	<script>
+		$(function() {
+			$('#navtrigger, nav').on('click', function(){
+				$('body').toggleClass('nav-open');
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		window.MemberfulOptions = {site: "https://caveclub.memberful.com"};  (function() {
+		var s   = document.createElement('script');    s.type  = 'text/javascript';
+		s.async = true;
+		s.src   = 'https://d35xxde4fgg0cx.cloudfront.net/assets/embedded.js';    setup = function() { window.MemberfulEmbedded.setup(); }    s.addEventListener("load", setup, false);    ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+		})();
+	</script>
 </body>
 </html>
