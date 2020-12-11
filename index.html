@@ -28,6 +28,15 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="./stylesheet.css">
+
+	<script type="text/javascript">
+		window.MemberfulOptions = {site: "https://caveclub.memberful.com"};  (function() {
+		var s   = document.createElement('script');    s.type  = 'text/javascript';
+		s.async = true;
+		s.src   = 'https://d35xxde4fgg0cx.cloudfront.net/assets/embedded.js';    setup = function() { window.MemberfulEmbedded.setup(); };
+		s.addEventListener("load", setup, false);    ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+		})();
+	</script>
 </head>
 
 <body>	
@@ -41,7 +50,7 @@
 	</header>
 
 	<nav>
-		<a href="#intro">subscribe</a>
+		<a href="https://caveclub.memberful.com/join">subscribe</a>
 		<a href="#deviltown">devil town</a>
 		<a href="#home">this is home</a>
 		<a href="#questions">questions?</a>
@@ -58,7 +67,7 @@
 					<img src="introguy.png">
 				</span>
 				<div class="btns">
-					<span><a href="#intro">subscribe</a></span>
+					<span><a href="https://caveclub.memberful.com/join">subscribe</a></span>
 					<span><a href="#deviltown">devil town</a></span>
 					<span><a href="#home">this is home</a></span>
 					<span><a href="#questions">questions?</a></span>
@@ -78,6 +87,7 @@
 						<li>yearly custom sticker pack</li>
 					</ul>
 					<p>$3 monthly</p>
+					<a class="btn" href="https://caveclub.memberful.com/checkout?plan=56368">subscribe</a>
 				</div>
 			</div>
 		</section>
@@ -93,7 +103,10 @@
 						<li>access to limited edition merch</li>
 						<li>first access to new and behind-the-scenes content</li>
 					</ul>
-					<p>$7 monthly<br>(subscribe for a full year of this is home and only pay $5 monthly)</p>
+					<p>$7 monthly</p>
+					<p>(subscribe for a full year of this is home and only pay $5 per month)</p>
+					<a class="btn" href="https://caveclub.memberful.com/checkout?plan=56368">subscribe monthly</a>
+					<a class="btn" href="https://caveclub.memberful.com/checkout?plan=56403">subscribe annually</a>
 				</div>
 				<img src="homepal.png">
 			</div>
@@ -116,14 +129,6 @@
 				$('body').toggleClass('nav-open');
 			});
 		});
-	</script>
-
-	<script type="text/javascript">
-		window.MemberfulOptions = {site: "https://caveclub.memberful.com"};  (function() {
-		var s   = document.createElement('script');    s.type  = 'text/javascript';
-		s.async = true;
-		s.src   = 'https://d35xxde4fgg0cx.cloudfront.net/assets/embedded.js';    setup = function() { window.MemberfulEmbedded.setup(); }    s.addEventListener("load", setup, false);    ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-		})();
 	</script>
 </body>
 </html>
