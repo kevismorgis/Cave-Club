@@ -296,6 +296,13 @@ nav hr {
 #cavequestions p {
     font-size: calc(1em + 0.5vw);
     line-height: 1.25em;
+    margin: 1em 0;
+}
+
+#cavequestions strong {
+  font-size: 1.5em;
+  margin-bottom: 0.1em;
+  display: inline-block;
 }
 
 
