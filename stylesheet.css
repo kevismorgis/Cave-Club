@@ -106,6 +106,10 @@ header img {
     width: auto;
 }
 
+footer {
+    padding: calc(1vw + 30px) 1vw;
+}
+
 section {
     min-height: 45vh;
     padding: calc(10px + 1vw);
@@ -147,6 +151,33 @@ section>div {
 .trigger i {
     position: absolute;
     font-size: calc(1em + 0.5vh);
+}
+
+#language {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background: #f9f7b9;
+    border-top-left-radius: 20px;
+    z-index: 10;
+}
+
+#language span {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#lang-en #en, #lang-es #es, #lang-kr #kr {
+    text-decoration: underline;
+}
+
+.lang-container {
+    display: none;
+}
+
+#lang-en #en-ver, #lang-es #es-ver, #lang-kr #kr-ver {
+    display: block;
 }
 
 #cavelink {
@@ -321,7 +352,6 @@ nav hr {
   
 
 /* mobile */
-
 @media only screen and (max-width: 600px) {
     #caveintro > div > * {
         flex-basis: 50%;
