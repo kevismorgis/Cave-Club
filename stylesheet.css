@@ -168,7 +168,7 @@ section>div {
     cursor: pointer;
 }
 
-#lang-en #en, #lang-es #es, #lang-kr #kr {
+#lang-en #en, #lang-es #es, #lang-kr #kr, #lang-kr #por {
     text-decoration: underline;
 }
 
@@ -176,7 +176,7 @@ section>div {
     display: none;
 }
 
-#lang-en #en-ver, #lang-es #es-ver, #lang-kr #kr-ver {
+#lang-en #en-ver, #lang-es #es-ver, #lang-kr #kr-ver, #lang-por #por-ver {
     display: block;
 }
 
