@@ -168,7 +168,7 @@ section>div {
     cursor: pointer;
 }
 
-#lang-en #en, #lang-es #es, #lang-kr #kr, #lang-kr #por {
+#lang-en #en, #lang-es #es, #lang-kr #kr, #lang-por #por {
     text-decoration: underline;
 }
 
