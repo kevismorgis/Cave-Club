@@ -57,6 +57,7 @@ button, input[type="submit"] {
     cursor: pointer;
     -webkit-appearance: none;
     -webkit-border-radius: none;
+    border-radius: none;
 }
 
 * {
@@ -235,6 +236,17 @@ nav hr {
     width: 100px;
 }
 
+#announcement {
+    display: block;
+    text-align: center;
+    font-size: calc(1em + 1vw);
+    padding: 1vmax;
+    margin-top: 10vh;
+    margin-bottom: -10vh;
+    background: #fcbc3b;
+    color: black;
+}
+  
 #caveintro {
     background: #508e3d;
 }
