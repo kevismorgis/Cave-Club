@@ -412,3 +412,16 @@ nav hr {
         order: -1;
     }
 }
+
+.topbar {
+    margin-top: 10vh;
+    display: block;
+    margin-bottom: -10vh;
+    padding: 0.5em 1em;
+    text-align: center;
+    font-size: calc(1em + 1vw);
+    text-decoration: none;
+    background: #ed8450;
+    color: black;
+    text-decoration: underline;
+}
